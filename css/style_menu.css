@@ -89,7 +89,7 @@ h4:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
     width: 0%; /* Change this to whatever width you want to have before hover. */
-    padding-top: 10px; /* This creates some space between the element and the border. */
+    padding-top: 10-px; /* This creates some space between the element and the border. */
     border-top: 3px solid black; /* This creates the border. Replace black with whatever color you want. */
     transition: .5s; /* This establishes the amount of time in seconds the animation should take from start to finish */
 }
