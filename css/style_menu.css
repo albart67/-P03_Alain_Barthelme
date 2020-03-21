@@ -1,76 +1,62 @@
 
-body {
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-areas: "header"
-                       "container"                       
-                        "footer";
-    grid-template-rows: 245px 2004px 140px;
-    margin: 0px;
-    padding: 0px;
+html{
+    height: 100%
 }
 
-/*haut de page titre Ohmyfood*/
+body {
+    width: 100%;  
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    height: 2388px;
+    min-height: 100%;
+}
+
+
+/*haut de page cadre Ohmyfood*/
 header {
-    font-family: sans-serif;    
-    grid-area: header;
-    background-color: #579c87;
-    color: #fdcb46;    
-    font-size: 30px;
     width: 100%;
-    display: flex;
+    height: 245px;
+    grid-area: header;
+    background-color: #579c87;       
+    width: 100%;
+    display: flex;    
     justify-content: center;
     align-items: center;
 }
 
-container{   
+/*Titre de la page ohmyfood"*/
+
+a {
+    text-decoration: none;
+}
+ 
+/*Titre ohmyfood*/
+h1 a {
+    font-family: sans-serif;
+    font-size: 3em;
+    color: #fdcb46; 
+}
+
+
+/*page contenant le cadre blanc et la page du menu*/
+main {   
+    width: 100%;
     height: 2004px;
-    grid-area: container;
+    grid-area: main;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-content: center; 
 }
 
-.titleUnderNote .fab{
-    font-size: 2em;
-}
-
-
-
-.note-line{
-    height: 20px;    
-}
-    
-
-h1{
-    font-family: sans-serif;
-    font-size: 3em;
-}
-
-
-
-
-.icon-note{    
-    text-align: center;    
-    font-size: 5em;
-    margin: 0px 10px;
-}
-
-.fa-itunes-note{
-    background: -webkit-linear-gradient(left, #f15d61, #f6916a);   
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
+/*Partie des menus*/
 article{
     margin-bottom: 60px;
 }
 
-
-h2{
+/*Titre dans cadre blanc*/
+h2 {
     text-align: center;    
     font-family:sans-serif;
     font-size: 3em;
@@ -78,157 +64,89 @@ h2{
     margin-bottom: 50px;   
 }
 
-.title-menu1 {
-    font-size: 2em;
-    margin: 0px 5px;
+/*Titre de chaque partie des menus*/
+
+
+
+h4 {
+    font-size: 2em; 
     text-align: center;
 }
+/*
+h4::before{
+    content:'';
+    width: 0;
+    border-bottom: 2px solid transparent;
+    
+}
 
-#menu-page1
-{
+h4:hover::before{
+   animation: nextarrow 2s linear infinite;    
+}
+*/
+
+h4:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 0%; /* Change this to whatever width you want to have before hover. */
+    padding-top: 10px; /* This creates some space between the element and the border. */
+    border-top: 3px solid black; /* This creates the border. Replace black with whatever color you want. */
+    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start to finish */
+}
+
+h4:hover:after {
+    width: 100%; /* This will be the new width of your border when on hover */
+}
+
+
+
+/*caractéristiques communes aux pages menus*/
+.menu-page {
     width: 1182px;
-    height: 1677px;
-    background-color: #fcdfdb;
-    display: flex;
-    justify-content:space-around;  
-    flex-direction: column;
-    margin: 20px auto;
-    font-family: 'Chilanka', cursive;
-}
-
-.title-menu1{
-    font-family: 'Kalam', cursive;
-}
-
-#menu-page1 .plat, #menu-page1 .price{
-    font-size: 22px;
-}
-
-
-.title-menu2 {
-    font-size: 2.1em;
-    margin: 0px 5px;
-    text-align: center;
-}
-
-#menu-page2 {  
-    width: 1182px;
-    height: 1677px;
-    background-color: #fff5fe;
+    height: 1677px;    
     display: flex;
     justify-content:space-around;  
     flex-direction: column;
     margin: 20px auto;    
 }
 
-.menu-detail2{
-    font-family: 'libre baskerville';
-}
-
-#menu2Main {     
-    color: #a56799; 
-}
-
-#menu2Desert {     
-    color: #6e4ccc;   
-}
-
-
-#menu-page2 .plat, #menu-page2 .price{
-    font-size: 25px;    
-}
-
-
-
-#menu-page3 {
-    width: 1182px;
-    height: 1677px;
-    background-color: #edefef;
-    display: flex;
-    justify-content: space-around;  
-    flex-direction: column;
-    margin: 0 auto;
-    font-family: 'Kalam', cursive;
-}
-
-
-.title-menu3{
-    font-family: 'Kalam', cursive;  
-    margin: 0px 5px;
-    text-align: center;
-}
-
-
-h4{
-    margin: 0px auto;
-}
-
-#menu-page3 .plat, #menu-page3 .price{
-    font-size: 25px;
-}
-
-
-#menu-page4{
-    width: 1182px;
-    height: 1677px;
-    background-color: #fdfffd;
-    display: flex;
-    justify-content: space-around;  
-    flex-direction: column;
-    margin: 20px auto;
-    font-family: 'Kalam', cursive;
-}
-
-.title-menu4{
-    font-family: 'Kalam', cursive;
-    font-size: 1.8em;
-    margin: 0px 5px;
-    text-align: center;
-}
-
-#menu-page4 .plat, #menu-page4 .price{
-    font-size: 22px;
-}
-
-
-.title-menu3 h4{
-    font-family: 'Kalam', cursive;
-    font-size: 2em;
-}
-
-
-
-#menu2Starter {
-    color :#c67412; 
-}
-
-
-
-.platAndPrice{    
+.platAndPrice {    
     display: flex;
     justify-content: space-between;
     margin : 10px 183px;
 }
 
-.platAlone{
-    margin: 10px 183px;
-    
+.platAlone {
+    margin: 10px 183px;    
 }
 
-.platAlone .plat{
+.platAlone .plat {
     padding: 10px 0px;
 }
 
-.lineTopTitle, .lineMiddleTitle, .lineBottomTitle{
+.lineTopTitle, .lineMiddleTitle, .lineBottomTitle {
+    height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 50px 0px 50px;
+    margin: 20px auto;
 }
 
 
+/*Menu LA NOTE ENCHANTEE*/
 
-#titleWithNote{
+/*Note + titre dessous*/
+.titleUnderNote .fab {
+    font-size: 2em;
+}
+
+.icon-note{    
+    text-align: center;    
+    font-size: 5em;
+    margin: 0px 10px;
+}
+
+#titleWithNote {
     text-align: center;    
     font-family: 'devonshire';
     font-size: 4em;
@@ -236,6 +154,42 @@ h4{
     margin-bottom: 10px;
 }
 
+/*gradiant de couleur note*/
+.fa-itunes-note {
+    background: -webkit-linear-gradient(left, #f15d61, #f6916a);   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.menu-page1 {
+    background-color: #fcdfdb;
+    font-family: 'Chilanka', cursive;    
+}
+
+
+.menu-page1 .platAndPrice, .platAlone{
+    font-size: 22px;
+}
+
+/*Note et titre en bas du menu*/
+.noteBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#besideNote {
+    font-family: 'devonshire';
+    font-size: 3em;
+}
+
+
+
+
+/*Menu LE CHIC A LA FRANCAISE*/
+
+/*Titre du menu avec gradiant de couleurs*/
 #titleWithChic {
     font-family: 'croissant one';
     text-align: center;    
@@ -246,19 +200,64 @@ h4{
     -webkit-text-fill-color: transparent;    
 }
 
-#titleStyle3{
+
+.menu-page2 {  
+    background-color: #fff5fe;
+}
+
+.menu-detail2 {
+    font-family: 'libre baskerville';
+}
+
+#menu2Starter {
+    color :#c67412; 
+}
+
+#menu2Main {     
+    color: #a56799; 
+}
+
+#menu2Desert {     
+    color: #6e4ccc;   
+}
+
+.menu-page2 .plat, .menu-page2 .price{
+    font-size: 25px;    
+}
+
+
+/*Menu LE DELICE DES PAPILLES*/
+
+/*titre du menu avec gradiant de couleurs*/
+#titleStyle3 {
     font-family: 'parisienne';
     text-align: center;    
     font-size: 6em;
     margin: 60px auto;
     background: -webkit-linear-gradient(left, #905bfd, #1b91fa);   
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
+    -webkit-text-fill-color: transparent;    
+}
+
+.menu-page3 {
+    background-color: #edefef;
+    font-family: 'Kalam', cursive;
 }
 
 
-#titleStyle4{
+.title-menu3 h4 {
+    font-family: 'Kalam', cursive;
+    font-size: 2em;
+}
+
+.menu-page3 .plat, .menu-page3 .price{
+    font-size: 25px;
+}
+
+/*Menu LE DELICE DES PAPILLES*/
+
+/*titre du menu avec gradiant de couleurs*/
+#titleStyle4 {
     text-align: center;    
     font-size: 6em;
     margin: 60px auto;  
@@ -268,53 +267,42 @@ h4{
     font-family: 'Kaushan Script';
 }
 
-#besideNote{
-    font-family: 'devonshire';
-    font-size: 3em;
+.menu-page4 {
+    background-color: #fdfffd;
+    font-family: 'Kalam', cursive;
 }
 
-spam{
-    float: right;
+
+.menu-page4 .plat, .menu-page4 .price{
+    font-size: 22px;
 }
 
-.platandprice .plat{
-    float: left;
-}
 
-.noteBottom{
+
+
+/*Pied de page*/
+footer {  
+    height: 137px;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-footer
-{   
+    justify-content: space-around;
     font-family: sans-serif;
     grid-area: footer;
-    background-color: #579c87;
+    background-color: #579c87;    
+    align-items: center; 
+    position:fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom a {
     color: #fdcb46;
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.contact{
-    float: left;
+    font-size: 35px;
     transition: transform cubic-bezier(0.71, -0.27, 0.11, 1.01) .5s;
-    text-align: center;
+    text-align: center;    
 }
 
-.mentionLeg{
-    float: right;
-    transition: transform ease-in-out .5s;
-    text-align: center;    
- }    
-
+/*Animation "contact" et "à propos"*/
 @-webkit-keyframes shake {
     from{
         -webkit-transform: rotate(5deg);
@@ -325,43 +313,43 @@ footer
     }
 }
 
-.contact:hover {
+.bottom:hover {
     -webkit-animation:shake .1s ease-in-out .1s infinite alternate;
 }
 
 
-.mentionLeg:hover{
-    -webkit-animation:shake .1s ease-in-out .1s infinite alternate;
-    }
 
-a
-{
-    margin-top: 50px;
-    text-decoration: none;
-    color: #fdcb46;
+/* 
+    MEDIA QUERIES FOR RESPONSIVENESS :
+    ---+--------+--------+------------
+    xs |    0px |  575px | Smartphones (portrait)
+    sm |  576px |  767px | Smartphones (landscape)
+    md |  768px |  991px | Tablets
+    lg |  992px | 1199px | Small screens
+    xl | 1200px |    +px | Large screens, TV etc...
 
-}
+
+*/
+
+
 
 @media screen and (max-width: 1199px) 
     {
-        body { 
-            display: grid;
-            width: auto;
-            height: auto;
-            grid-template-areas: "header"
-                                 "container"
-                                 "footer";
-            grid-template-rows: 245px auto 140px;
+        body {
+            width: 100%;  
             margin: 0px;
             padding: 0px;
-        }  
-        
-        container {
+            position: relative;
+            height: 2388px;
+            min-height: 100%;
+        }
+              
+        main {
             width: 100%;
             height: auto;
         }
         
-        #menu-page1, #menu-page2, #menu-page3, #menu-page4{
+        .menu-page{
             width: 100%;
             height: auto;
             margin: auto;
@@ -392,19 +380,19 @@ a
             width: auto;
             height: auto;
             grid-template-areas: "header"
-                                 "container"
+                                 "main"
                                  "footer";
             grid-template-rows: 200px auto 100px;
             margin: 0px;
             padding: 0px;
         }  
         
-        container {
+        main {
             width: 100%;
             height: auto;
         }
         
-        #menu-page1, #menu-page2, #menu-page3, #menu-page4{
+        .menu-page{
             width: 100%;
             height: auto;
             margin: auto;
@@ -455,14 +443,14 @@ a
             width: auto;
             height: auto;
             grid-template-areas: "header"
-                                 "container"
+                                 "main"
                                  "footer";
             grid-template-rows: 200px auto 100px;
             margin: 0px;
             padding: 0px;
         }  
         
-        container {
+        main {
             width: 100%;
             height: auto;
         }
@@ -471,7 +459,7 @@ a
             font-size: 1em;
         }
         
-        #menu-page1, #menu-page2, #menu-page3, #menu-page4{
+        .menu-page{
             width: 100%;
             height: auto;
             margin: auto;
@@ -507,19 +495,19 @@ a
         
         
         .note-line img{
-            width: 50px;
+            width: 100px;
         }
         
         .lineTopLeft2 img, .lineTopRight2 img, .lineMiddleLeft2 img, .lineMiddleRight2 img, .lineBottomLeft2 img, .lineBottomRight2 img{
-            width: 50px;
+            width: 100px;
         }
         
         .lineLeftMenu3 img, .lineRightMenu3 img{
-            width: 50px;
+            width: 100px;
         }
         
         .lineLeftMenu4 img, .lineRightMenu4 img{
-            width: 50px;
+            width: 100px;
         }
         
         
@@ -533,14 +521,14 @@ a
             width: auto;
             height: auto;
             grid-template-areas: "header"
-                                 "container"
+                                 "main"
                                  "footer";
             grid-template-rows: 200px auto 100px;
             margin: 0px;
             padding: 0px;
         }  
         
-        container {
+        main {
             width: 100%;
             height: auto;
         }
@@ -559,7 +547,7 @@ a
             font-size: 3em;
         }
         
-        #menu-page1, #menu-page2, #menu-page3, #menu-page4{
+        .menu-page{
             width: 100%;
             height: auto;
             margin: auto;
@@ -596,17 +584,17 @@ a
         }
         
         .lineTopLeft2 img, .lineTopRight2 img, .lineMiddleLeft2 img, .lineMiddleRight2 img, .lineBottomLeft2 img, .lineBottomRight2 img{
-            width: 50px;
+            visibility: hidden;
         }
         
         .lineLeftMenu3 img, .lineRightMenu3 img{
-            width: 50px;
+            visibility: hidden;
         }
         
         
         
         .lineLeftMenu4 img, .lineRightMenu4 img{
-            width: 50px;
+            visibility: hidden;
         }
         
         .icon-note{    
@@ -620,7 +608,7 @@ a
             flex-direction: column;
         }
         
-         h1{
+         h1 a{
             font-size: 2em;
         }
         
