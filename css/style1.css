@@ -1,4 +1,4 @@
-/*ELEMENTS COMMUNS A L'ENSEMBLE DES PAGES*/
+/*------------------------------ELEMENTS COMMUNS A L'ENSEMBLE DES PAGES---------------------------------------*/
 
 body {
     width: 100%;
@@ -6,6 +6,8 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+
 
 
 /*haut de page cadre Ohmyfood*/
@@ -19,10 +21,6 @@ header {
     align-items: center;
 }
 
-a {
-    text-decoration: none;
-}
- 
 /*Titre ohmyfood*/
 h1 a {
     font-family: sans-serif;
@@ -30,15 +28,65 @@ h1 a {
     color: #fdcb46; 
 }
 
-/*page intérieure contenant pochettes des menus + prochainement sur page d'accueil et le menu sur autres pages*/
+/*contenu intérieur de l'ensemble des pages*/
 main {   
-    width: 100%;
+    width: 1500px;
     height: 2004px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-content: center; 
+    align-items: center;
 }
+
+a {
+    text-decoration: none;
+}
+ 
+
+/*PIED DE PAGE FIXE*/
+
+footer {  
+    height: 137px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    grid-area: footer;
+    background-color: #579c87;    
+    align-items: center; 
+    position:fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom a{
+    color: #fdcb46;
+    font-size: 35px;
+    transition: transform cubic-bezier(0.71, -0.27, 0.11, 1.01) .5s;
+    text-align: center;    
+}
+
+/*Animation "contact" et "à propos"*/
+@-webkit-keyframes shake {
+    from{
+        -webkit-transform: rotate(5deg);
+    }
+    to{   
+        -webkit-transform: rotate(-5deg);
+        -webkit-transform-origin: center center;         
+    }
+}
+
+.bottom:hover {
+    -webkit-animation:shake .1s ease-in-out .1s infinite alternate;
+}
+
+
+
+/*-------------------------------PAGE D'ACCUEIL DU SITE-----------------------------------*/
+
+
 
 
 /*ZONE CONTENANT LES 4 COUVERTURES DE MENU*/
@@ -55,6 +103,7 @@ main {
 .container a {
     margin: 0px 0px;
 }
+
 
 /*CARACTERISTIQUES COMMUNES DES COUVERTURES MENU*/
 .frame{
@@ -82,13 +131,14 @@ main {
     opacity: 0.5;
 }
 
-/*titre "MENU" sur pochette 1,3 et 4*/
+/*titre "MENU" sur couverture des menus 1,3 et 4*/
 .fontMenu {
     font-size: 50px;
     font-family: 'tillana';
 }
 
 /*COUVERTURE "LA NOTE ENCHANTEE"*/
+/*Icone note avec gradiant de couleur*/
 .fa-itunes-note {
     font-size: 3em;
     background: -webkit-linear-gradient(left, #f15d61, #f6916a);   
@@ -96,10 +146,12 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
+/*Titre du menu avec style*/
 .note-title {    
     font-family: 'devonshire';
     color: #3c1218;
     font-size: 2em;
+    font-weight: normal;
 }
 
 .fontMenu1 {
@@ -111,6 +163,8 @@ main {
 }
 
 /*COUVERTURE "LE CHIC A LA FRANCAISE"*/
+
+/*Titre "Chic à la francaise" avec gradiant de couleur*/
 .chic-title {
     background: -webkit-linear-gradient(left, #d8852e, #905bfd);   
     -webkit-background-clip: text;
@@ -123,6 +177,7 @@ main {
     font-size: 50px;
     font-family: 'libre Baskerville';
     color: #c77412;
+    font-weight:900;
 }
 
 .frame-menu2 {    
@@ -131,6 +186,8 @@ main {
 
 
 /*COUVERTURE LE DELICE DES PAPILLES*/
+
+/*Titre "Delice des papilles" avec gradiant de couleur*/
 .delice-title {
     background: -webkit-linear-gradient(left, #905bfd, #1b91fa);   
     -webkit-background-clip: text;
@@ -148,6 +205,7 @@ main {
 }
 
 /*COUVERTURE LA PALETTE DU GOUT*/
+/*Titre "la palette du gout" avec gradiant de couleur*/
 .palette-title {
     background: -webkit-linear-gradient(left, #42973c, #bfff7e);   
     -webkit-background-clip: text;
@@ -172,7 +230,7 @@ main {
     margin: 0px auto;
     justify-content: center;
     background-color: #ffffff;    
-    }
+}
 
 .next{
     font-family: sans-serif;
@@ -248,56 +306,13 @@ main {
 }
 
 
-/*PIED DE PAGE FIXE*/
-
-footer {  
-    height: 137px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-family: sans-serif;
-    grid-area: footer;
-    background-color: #579c87;    
-    align-items: center; 
-    position:fixed;
-    bottom: 0;
-    left: 0;
-}
-
-.bottom a{
-    color: #fdcb46;
-    font-size: 35px;
-    transition: transform cubic-bezier(0.71, -0.27, 0.11, 1.01) .5s;
-    text-align: center;    
-}
-
-/*Animation "contact" et "à propos"*/
-@-webkit-keyframes shake {
-    from{
-        -webkit-transform: rotate(5deg);
-    }
-    to{   
-        -webkit-transform: rotate(-5deg);
-        -webkit-transform-origin: center center;         
-    }
-}
-
-.bottom:hover {
-    -webkit-animation:shake .1s ease-in-out .1s infinite alternate;
-}
-
-
 /*----------------------------------CSS DES MENUS-------------------------------------*/
 
-/*CARACTERISTIQUES COMMUNES AUX PAGES MENU*/
 
-/*etapes des menus*/
-article{
-    margin-bottom: 60px;
-}
+/*CARACTERISTIQUES COMMUNES AUX 4 PAGES DE MENU*/
 
 /*Titre dans cadre blanc*/
-#TitleNoStyle {
+#titleNoStyle {
     text-align: center;    
     font-family:sans-serif;
     font-size: 3em;
@@ -305,14 +320,18 @@ article{
     margin-bottom: 50px;   
 }
 
+/*etapes des menus*/
+article{
+    margin-bottom: 50px;
+}
 
-/*Titre de chaque étape des menus*/
-
+/*Titre de chaque étape de menus*/
 h4 {
-    font-size: 2em; 
+    font-size: 1.7em; 
     text-align: center;
 }
 
+/*Animation trait sous titre étapes menus*/
 h4:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
@@ -326,58 +345,84 @@ h4:hover:after {
     width: 100%; /* This will be the new width of your border when on hover */
 }
 
+/*page intérieure colorée contenant le menu*/
 .menu-page {
     width: 1182px;
-    height: 1677px;    
+    height: 1677px;  
     display: flex;
     justify-content:space-around;  
     flex-direction: column;
-    margin: 20px auto;    
+       
 }
 
 .platAndPrice {    
     display: flex;
     justify-content: space-between;
-    margin : 10px 183px;
+    margin : 0px 0px;
+    padding: 0px 160px;
 }
 
 .platAlone {
-    margin: 10px 183px;    
+    margin: 10px 0px; 
+    padding: 0px 160px;
 }
 
-.platAlone .plat {
-    padding: 10px 0px;
+.platAlone .plat{
+    padding: 5px 0px;
 }
 
 .lineTopTitle, .lineMiddleTitle, .lineBottomTitle {
-    height: 44px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding-top: 50px;
+    padding: 0px 50px;
 }
+
+
 
 
 /*MENU "LA NOTE ENCHANTEE"*/
 
 /*Note + titre dessous*/
+
+.titleUnderNote{
+    margin-top: 200px;
+}
+
 .titleUnderNote .fab {
-    font-size: 2em;
+    font-size: 7em;    
 }
 
-.icon-note{    
-    text-align: center;    
-    font-size: 5em;
-    margin: 0px 10px;
-}
 
-#titleWithNote {
+.titleWithNote {
     text-align: center;    
     font-family: 'devonshire';
     font-size: 4em;
     margin-top: 5px;
     margin-bottom: 10px;
+    font-weight: normal;
 }
+
+
+.icon-note {    
+    text-align: center;  
+    margin-right: 10px;
+}
+
+.noteBottom .fab{
+    font-size: 4em;
+}
+
+.noteBottom {
+    margin-bottom: 100px;
+    
+}
+
+
+
 
 /*gradiant de couleur note*/
 .fa-itunes-note {
@@ -387,12 +432,22 @@ h4:hover:after {
 }
 
 .menu-page1 {
-    background-color: #fcdfdb;
-    font-family: 'Chilanka', cursive;    
+    background-color: #fcdfdb;    
+    font-family: 'Chilanka', cursive;  
 }
 
-.menu-page1 .platAndPrice, .platAlone{
+.menu1detail{
+    padding: 0px 125px;
+}
+
+.menu-page1 .platAndPrice, .menu-page1 .platAlone{
     font-size: 22px;
+    margin: 0px 0px; 
+    padding: 0px 0px;
+}
+
+.menu-page1 .lineTopTitle, .menu-page1 .lineMiddleTitle, .menu-page1 .lineBottomTitle{
+    padding: 0px 0px;
 }
 
 /*Note et titre en bas du menu*/
@@ -405,13 +460,14 @@ h4:hover:after {
 #besideNote {
     font-family: 'devonshire';
     font-size: 3em;
+    margin: 0px 0px;
 }
 
 
 /*MENU "LE CHIC A LA FRANCAISE"*/
 
 /*Titre du menu avec gradiant de couleurs*/
-#titleWithChic {
+.titleWithChic {
     font-family: 'croissant one';
     text-align: center;    
     font-size: 3em;
@@ -423,12 +479,9 @@ h4:hover:after {
 
 
 .menu-page2 {  
-    background-color: #fff5fe;
+    background-color: #fff5fe;    
 }
 
-.menu-detail2 {
-    font-family: 'libre baskerville';
-}
 
 #menu2Starter {
     color :#c67412; 
@@ -443,14 +496,14 @@ h4:hover:after {
 }
 
 .menu-page2 .plat, .menu-page2 .price{
-    font-size: 25px;    
+    font-size: 25px; 
 }
 
 
 /*MENU "LE DELICE DES PAPILLES"*/
 
 /*titre du menu avec gradiant de couleurs*/
-#titleStyle3 {
+.titleStyle3 {
     font-family: 'parisienne';
     text-align: center;    
     font-size: 6em;
@@ -463,6 +516,7 @@ h4:hover:after {
 .menu-page3 {
     background-color: #edefef;
     font-family: 'Kalam', cursive;
+    
 }
 
 .title-menu3 h4 {
@@ -477,7 +531,7 @@ h4:hover:after {
 /*MENU LE DELICE DES PAPILLES*/
 
 /*titre du menu avec gradiant de couleurs*/
-#titleStyle4 {
+.titleStyle4 {
     text-align: center;    
     font-size: 6em;
     margin: 60px auto;  
@@ -528,17 +582,48 @@ h4:hover:after {
             margin: 20px auto;
         }
         
+        .menu-page {
+            width: auto;
+        }
+        
+        .menu-detail{
+            padding: 0px 0px;
+            width: auto;
+        }
+        
         .frame{
             height: 560px;
             width: 400px;
-        }        
+        }  
+        
+        .note-line img{
+            width: 200px;
+        }
+        
+        .lineTopLeft2 img, .lineTopRight2 img, .lineMiddleLeft2 img, .lineMiddleRight2 img, .lineBottomLeft2 img, .lineBottomRight2 img{
+            width: 200px;
+        }
+        
+        .lineLeftMenu3 img, .lineRightMenu3 img{
+            width: 200px;
+        }
+        
+        .lineLeftMenu4 img, .lineRightMenu4 img{
+            width: 200px;
+        }
 }       
     
 
 @media screen and (max-width: 991px) 
-    {        
+    {    
+        body{
+            height: auto;
+        }
+        
         main{
             width: auto;
+            margin-bottom: 140px;
+            height: auto;
         }
         
         .container {
@@ -551,21 +636,25 @@ h4:hover:after {
             align-content:space-between;
             margin: 0px auto;
         }
-        
-        
-        
+                
         .frame{
             margin: 20px auto;
         }
         
-        .next-zone{
-            margin-bottom: 140px;
-        }
-        
+                
         .menu-page{
             width: 100%;
             height: auto;
             margin: auto;
+        }
+        
+        .titleStyle{
+            font-size: 50px;
+        }
+        
+         .menu-detail{
+            padding: 0px 0px;
+            width: auto;
         }
         
         .platAndPrice, .platAlone {   
@@ -620,11 +709,20 @@ h4:hover:after {
             margin: 0px auto;
         }
         
-        .main{
-            width: auto;
+         body{
+            height: auto;
         }
         
-                
+        main{
+            width: auto;
+            margin-bottom: 140px;
+        }
+        
+        header{
+            height: 150px;
+        }
+        
+        
         .next{
             width: 400px;
             height: 75px;
@@ -635,7 +733,11 @@ h4:hover:after {
         }
         
         #titleNoStyle{
-            font-size: 1em;
+            visibility: hidden;
+        }
+        
+        .titleStyle{
+            font-size: 50px;
         }
         
         .menu-page{
@@ -674,19 +776,27 @@ h4:hover:after {
         
         
         .note-line img{
-            width: 100px;
+            visibility: hidden;
+            width: 0px;
         }
         
         .lineTopLeft2 img, .lineTopRight2 img, .lineMiddleLeft2 img, .lineMiddleRight2 img, .lineBottomLeft2 img, .lineBottomRight2 img{
-            width: 100px;
+            width: 0px;
+            visibility: hidden;
         }
         
         .lineLeftMenu3 img, .lineRightMenu3 img{
             width: 100px;
+            visibility: hidden;
         }
         
         .lineLeftMenu4 img, .lineRightMenu4 img{
             width: 100px;
+            visibility: hidden;
+        }
+        
+        footer{
+            height: 120px;
         }
         
 }
@@ -715,9 +825,18 @@ h4:hover:after {
             margin: 0px auto;
         }
         
+        p {
+            font-size: 0.8em;
+        }
+        
         main{
             width: auto;
             height: auto;
+        }
+        
+        .menu-detail{
+            padding: 0px 0px;
+            width: auto;
         }
  
         .frame {
@@ -744,8 +863,8 @@ h4:hover:after {
         }
         
         
-        .next p3{
-            font-size: 30px;
+        .next h3{
+            font-size: 25px;
         }
                 
                       
@@ -757,16 +876,25 @@ h4:hover:after {
             visibility: hidden;
             margin: 0px auto;
         }
+        
+        .titleUnderNote {
+            margin-top: 10px;
+        }
+        
+        .titleUnderNote .fab {
+            font-size: 2em;    
+        }
+        
+        .noteBottom .fab{
+            font-size: 2em;
+        }
             
         
-        #titleStyle3{
-            font-size: 4em;
+        .titleStyle{
+            font-size: 40px;
         }
         
-        #titleStyle4{
-            font-size: 3em;
-        }
-        
+               
         .menu-page{
             width: 100%;
             height: auto;
@@ -777,7 +905,8 @@ h4:hover:after {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px 0px;
+            margin: 10px 0px;
+            padding: 0px 0px;
         }
         
         .platAndPrice, .platAlone {   
@@ -785,39 +914,38 @@ h4:hover:after {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin: auto;            
+            margin: auto;  
+            padding: 0px 0px;
         }
         
         .plat, .price{
             text-align: center;
+            padding: 0px 0px;
         }
         
-        .lineTopTitle, .lineMiddleTitle, .lineBottomTitle{
-            margin: 10px 0px;
-        }
         .title-menu2 h4{
             text-align: center;
         }
         
         .note-line img{
-            width: 50px;
+            width: 0px;
             visibility: hidden;
         }
         
         .lineTopLeft2 img, .lineTopRight2 img, .lineMiddleLeft2 img, .lineMiddleRight2 img, .lineBottomLeft2 img, .lineBottomRight2 img{
-            width: 50px;
+            width: 0px;
             visibility: hidden;
         }
         
         .lineLeftMenu3 img, .lineRightMenu3 img{
-            width: 50px;
+            width: 0px;
             visibility: hidden;
         }
         
         
         
         .lineLeftMenu4 img, .lineRightMenu4 img{
-            width: 50px;
+            width: 0px;
             visibility: hidden;
         }
         
