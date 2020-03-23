@@ -30,12 +30,12 @@ h1 a {
 
 /*contenu intérieur de l'ensemble des pages*/
 main {   
-    width: 1500px;
+    width: auto;
     height: 2004px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-content: center; 
+    justify-content: center; 
     align-items: center;
 }
 
@@ -170,7 +170,7 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'croissant one';
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .fontMenu2 {
@@ -193,7 +193,7 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'parisienne';
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .fontMenu3 {
@@ -211,7 +211,7 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Kaushan Script';
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .fontMenu4 {
@@ -322,7 +322,7 @@ footer {
 
 /*etapes des menus*/
 article{
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 /*Titre de chaque étape de menus*/
@@ -574,6 +574,8 @@ h4:hover:after {
         
         main{
             width: auto;
+            height: auto;
+            margin-bottom: 150px;
         }
         
         .container {
@@ -583,13 +585,26 @@ h4:hover:after {
         }
         
         .menu-page {
-            width: auto;
+            width: 100%;
         }
         
         .menu-detail{
             padding: 0px 0px;
             width: auto;
         }
+        
+        .menu1detail{
+            padding: 0px 100px;            
+        }
+        
+        .titleStyle{
+            margin-bottom: 0px;            
+        }
+        
+        .platAndPrice, .platAlone{
+            padding: 0px 100px;
+        }
+        
         
         .frame{
             height: 560px;
@@ -808,11 +823,11 @@ h4:hover:after {
         }
         
         header{
-            height: 100px;
+            height: 150px;
         }
         
         h1 a{
-            font-size: 1.5em;
+            font-size: 1.9em;
         }
         
         .container {
@@ -827,15 +842,17 @@ h4:hover:after {
         
         p {
             font-size: 0.8em;
+            margin: 5px 0px;
         }
         
         main{
             width: auto;
             height: auto;
+            margin-bottom: 100px;
         }
         
         .menu-detail{
-            padding: 0px 0px;
+            padding: 0px 5px;
             width: auto;
         }
  
@@ -853,7 +870,7 @@ h4:hover:after {
         }
         
         .next-zone{
-            margin-bottom: 100px;
+            margin-bottom: 0px;
             height: 150px;
         }
         
@@ -875,6 +892,7 @@ h4:hover:after {
         #titleNoStyle{
             visibility: hidden;
             margin: 0px auto;
+            font-size: 0px;
         }
         
         .titleUnderNote {
@@ -891,7 +909,7 @@ h4:hover:after {
             
         
         .titleStyle{
-            font-size: 40px;
+            font-size: 50px;
         }
         
                
@@ -923,6 +941,10 @@ h4:hover:after {
             padding: 0px 0px;
         }
         
+        .plat{
+            margin-top: 20px;
+        }
+        
         .title-menu2 h4{
             text-align: center;
         }
@@ -951,7 +973,7 @@ h4:hover:after {
         
         .icon-note{    
             text-align: center;    
-            font-size: 3em;
+            font-size: 2em;
             margin: 0px 10px;
         }
         
@@ -961,10 +983,9 @@ h4:hover:after {
         }
         
         footer{
-            height: 100px;
+            height: 80px;
         }
-        
-        
+                
         .mentionLeg a, .contact a{
             font-size: 20px;
         }
