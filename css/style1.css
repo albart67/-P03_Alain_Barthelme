@@ -88,12 +88,11 @@ footer {
 
 /*ZONE CONTENANT LES 4 COUVERTURES DE MENU*/
 .container {
-    height: 1724px;
-    width: 1500px;
+    height: 862px;
+    width: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content:space-around;
+    justify-content:center;
+    align-items: center;
     margin: 0px auto;
 }
 
@@ -111,6 +110,16 @@ footer {
     justify-content: center;        
     margin: 0px auto;
     box-shadow: 2px 2px 12px #555 
+}
+
+.frame-menu1, .frame-menu3{
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+.frame-menu2, .frame-menu4{
+    margin-left: 30px;
+    margin-right: auto;
 }
 
 .zoom-menu {
@@ -589,6 +598,7 @@ h4:hover:after {
 */
 
 
+
 @media screen and (max-width: 1199px) 
     {
         body{
@@ -602,7 +612,7 @@ h4:hover:after {
         }
         
         .container {
-            height: 1500px;
+            height: auto;
             width: auto;
             margin: 20px auto;
         }
