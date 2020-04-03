@@ -62,7 +62,7 @@ footer {
 /*Animation "contact" et "à propos"*/
 @-webkit-keyframes shake {
     0%{
-        -webkit-transform: translate (0px, 0px);
+        -webkit-transform: translate (0px, 0x);
     }
     50%{   
         -webkit-transform: translate(-5px, -5px);
@@ -350,7 +350,7 @@ h4:hover:after {
     width: 1182px;
     height: 1677px;  
     display: flex;
-    justify-content:space-between;  
+    justify-content:space-around;  
     flex-direction: column;
     box-shadow: 2px 2px 12px #555       
 }
@@ -360,14 +360,14 @@ h4:hover:after {
     font-size: 25px;
 }
 
-/*étapes des menus avec plat et prix*/
+/*plat avec nom de plat et prix*/
 .platAndPrice {    
     display: flex;
     justify-content: space-between;
     padding: 0px 160px;
 }
 
-/*étapes de menus sans prix*/
+/*plat sans prix*/
 .platAlone {
     padding: 0px 160px;
 }
@@ -416,8 +416,6 @@ h4:hover:after {
     text-align: center;  
     margin-right: 10px;
 }
-
-
 
 
 /*gradiant de couleur note*/
@@ -683,8 +681,7 @@ h4:hover:after {
         .lineTopTitle, .lineMiddleTitle, .lineBottomTitle{
             margin: 10px 10px;
             padding: 0px 0px;
-        }
-        
+        }        
                 
 }
 
@@ -720,9 +717,10 @@ h4:hover:after {
         
         .lineTopTitle, .lineMiddleTitle, .lineBottomTitle{
             display: flex;
+            height: 40px;
             justify-content: center;
             align-items: center;
-            margin: 20px 0px;
+            margin: 40px 0px 0px 0px;
         }
         
         .platAndPrice, .platAlone {   
@@ -733,6 +731,9 @@ h4:hover:after {
             text-align: center;
         }
         
+        .price p{
+            margin-top: 5px;
+        }
                 
         h4{
             text-align: center;
@@ -817,10 +818,6 @@ h4:hover:after {
             font-size: 50px;
         }        
                
-        .lineTopTitle, .lineMiddleTitle, .lineBottomTitle{
-            margin: 10px 0px;
-        }        
-                
         .platAndPrice, .platAlone {   
             padding: 0px 0px;
         }
